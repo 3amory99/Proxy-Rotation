@@ -21,7 +21,7 @@ def getProxies():
 
 def extract(proxy):
     # this was for when we took a list into the function, without conc futures.
-    
+
     # In random proxy choice
     # proxy = random.choice(proxylist)
     # headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'}
@@ -1031,6 +1031,7 @@ def extract(proxy):
     random_user_agent = user_agents[random.randint(0, (len(user_agents) - 1))]
     res = requests.get("https://api.ipify.org/?format=json", headers={'User-Agent': random_user_agent},
                        proxies={'http': proxy, 'https': proxy}, timeout=1)
+
     try:
         if res.status_code == 200:
             print(res.json(), res.status_code)
