@@ -21,8 +21,7 @@ def getProxies():
 
 def extract(proxy):
     # this was for when we took a list into the function, without conc futures.
-
-
+    
     # In random proxy choice
     # proxy = random.choice(proxylist)
     # headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0'}
