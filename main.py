@@ -1031,7 +1031,6 @@ def extract(proxy):
     random_user_agent = user_agents[random.randint(0, (len(user_agents) - 1))]
     res = requests.get("https://api.ipify.org/?format=json", headers={'User-Agent': random_user_agent},
                        proxies={'http': proxy, 'https': proxy}, timeout=1)
-
     try:
         if res.status_code == 200:
             print(res.json(), res.status_code)
